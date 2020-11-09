@@ -1,8 +1,7 @@
 import React from 'react'
+import Home from '@views/Home'
 
-const App = () => {
-  return (
-    <h1>App</h1>
-  )
-}
+const App = () => (
+  <Home />
+)
 export default App
