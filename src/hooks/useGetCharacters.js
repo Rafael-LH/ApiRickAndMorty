@@ -14,6 +14,8 @@ const useGetCharacters = () => {
                 id
                 name
                 status
+                image
+                species
               }
             }
           }

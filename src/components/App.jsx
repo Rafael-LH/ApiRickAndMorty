@@ -1,7 +1,11 @@
 import React from 'react'
 import Home from '@views/Home'
+import GlobalStyles from '../views/GlobalStyles'
 
 const App = () => (
-  <Home />
+  <>
+    <GlobalStyles />
+    <Home />
+  </>
 )
 export default App
