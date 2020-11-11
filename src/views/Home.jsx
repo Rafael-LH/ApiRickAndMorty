@@ -1,6 +1,6 @@
 import React from 'react'
 import useGetCharacters from '../hooks/useGetCharacters'
-import { Loading, ContainerCards, Card } from './styles'
+import { Loading, ContainerCards, Card, Information } from './styles'
 
 const Home = () => {
   const { dataCharacters } = useGetCharacters()
@@ -18,10 +18,12 @@ const Home = () => {
                     <img src={item.image} alt={item.name} />
                     <p><b>{item.name}</b></p>
                   </figure>
-                  <p>
-                    <span>.</span>
-                    {item.status} - {item.species}
-                  </p>
+                  <Information isAlive={item.status === 'Alive'} >
+                    <p>
+                      <span></span>
+                      {item.status} - {item.species}
+                    </p>
+                  </Information>
                 </Card>
               ))
             }
